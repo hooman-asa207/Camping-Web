@@ -1,0 +1,286 @@
+:root {
+    --orange: #E76F51;
+    --dark-gray: #3B3735;
+}
+
+/* reset */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: "Roboto";
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* reset */
+
+
+
+/* helper class & component */
+
+.btn {
+    display: block;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 10rem;
+    color: #fff;
+    background-color: var(--orange);
+    margin: 0 auto;
+    line-height: 4rem;
+}
+
+/* helper class & component */
+
+
+
+/* app styles */
+
+
+
+/* nav & header */
+.header {
+    background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(/images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    margin-right: 3rem;
+}
+
+.nav-logo__img {
+    width: 100%;
+    height: 100%;
+}
+
+/* nav & header */
+
+/* main menu */
+.menu {
+    display: none;
+    font-size: 15px;
+}
+
+
+.menu__item {
+    margin-right: 2rem;
+}
+
+.menu__link {
+    color: #D2D2D2;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.menu__link--active {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.menu__link--active::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--orange);
+    border-radius: 10rem;
+    inset: 7px 0 0 0;
+    top: 7px;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+/* main menu */
+
+/* mobile menu & nav menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -60rem;
+    bottom: 0;
+    width: 25rem;
+    background-color: #525252;
+    padding: 2rem 2.5rem;
+    font-family: "Roboto";
+    transition: all 0.25s ease-in-out;
+    z-index: 20;
+}
+
+.nav-menu.nav-menu--open {
+    left: 0rem;
+}
+
+.mobile-menu__item {
+    margin-bottom: 1.5rem;
+}
+
+/* mobile menu & nav menu */
+
+/* header links */
+.header__links {
+    display: none;
+}
+
+.header__link {
+    margin-left: 2rem;
+}
+
+.header__link--border {
+    border: 1px solid #fff;
+    border-radius: 10rem;
+    padding: 0.8rem 2.5rem;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+        background-color: #fff;
+        color: var(--dark-gray);
+    }
+}
+
+.nav-menu__links {
+    display: flex;
+}
+
+.nav-menu__link {
+    padding: 1rem 2rem;
+    display: block;
+    border: 1px solid #fff;
+}
+
+/* header links */
+
+/* nav buttons */
+.nav-btn {
+    background-color: #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.nav-btn__line {
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background-color: var(--orange);
+    transition: all 0.25s ease-in-out;
+    position: relative;
+}
+
+.nav-btn__line::before,
+.nav-btn__line::after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background-color: var(--orange);
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-btn__line::before {
+    top: 0.8rem;
+}
+
+.nav-btn__line::after {
+    top: -0.8rem;
+}
+
+.nav-btn--open .nav-btn__line {
+    background-color: transparent;
+}
+
+.nav-btn--open .nav-btn__line::before {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+.nav-btn--open .nav-btn__line::after {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+/* nav buttons */
+
+/* header content */
+.header-content {
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.header-content__title {
+    font-family: "Archivo Black";
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    line-height: 5rem;
+}
+
+.header-content__caption {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.header-content__link {
+    transition: all 0.15s ease-in;
+    border: 1px solid var(--orange);
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+/* header content */
+.overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    transition: all 0.25s ease-in;
+}
+
+
+
+/* app styles */
