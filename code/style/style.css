@@ -111,20 +111,20 @@ a {
     color: #fff;
     position: relative;
     z-index: 1;
-}
 
-.menu__link--active::after {
-    content: '';
-    position: absolute;
-    width: 3rem;
-    height: 0.3rem;
-    background-color: var(--orange);
-    border-radius: 10rem;
-    inset: 7px 0 0 0;
-    top: 7px;
-    margin: 0 auto;
-    transform: rotate(45deg);
-    z-index: -1;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 3rem;
+        height: 0.3rem;
+        background-color: var(--orange);
+        border-radius: 10rem;
+        inset: 7px 0 0 0;
+        top: 7px;
+        margin: 0 auto;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
 }
 
 /* main menu */
@@ -143,12 +143,45 @@ a {
     z-index: 20;
 }
 
+.nav-menu__title {
+    font-family: "Archivo Black";
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
 .nav-menu.nav-menu--open {
     left: 0rem;
 }
 
 .mobile-menu__item {
     margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        padding-left: 1.5rem;
+    }
+
+    &::before {
+        content: '';
+        width: 0rem;
+        height: 0.3rem;
+        background-color: var(--orange);
+        position: absolute;
+        border-radius: 10rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transition: all 0.25s ease-in-out;
+    }
+
+    &:hover::before {
+        width: 1rem;
+    }
 }
 
 /* mobile menu & nav menu */
@@ -182,6 +215,12 @@ a {
     padding: 1rem 2rem;
     display: block;
     border: 1px solid #fff;
+    transition: all 0.25s ease-in;
+
+    &:hover {
+        background-color: #fff;
+        color: var(--dark-gray);
+    }
 }
 
 /* header links */
@@ -206,17 +245,17 @@ a {
     background-color: var(--orange);
     transition: all 0.25s ease-in-out;
     position: relative;
-}
 
-.nav-btn__line::before,
-.nav-btn__line::after {
-    content: '';
-    position: absolute;
-    width: 2.5rem;
-    height: 0.3rem;
-    border-radius: 1rem;
-    background-color: var(--orange);
-    transition: all 0.25s ease-in-out;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 0.3rem;
+        border-radius: 1rem;
+        background-color: var(--orange);
+        transition: all 0.25s ease-in-out;
+    }
 }
 
 .nav-btn__line::before {
@@ -256,8 +295,9 @@ a {
 }
 
 .header-content__caption {
-    margin-bottom: 2rem;
     font-size: 1.5rem;
+    max-width: 34rem;
+    margin: 0 auto 2rem auto;
 }
 
 .header-content__link {
@@ -271,14 +311,18 @@ a {
 
 /* header content */
 .overlay {
+    display: none;
     width: 100%;
     height: 100%;
-    opacity: 0;
     position: absolute;
     inset: 0;
     backdrop-filter: blur(10px);
     z-index: 10;
     transition: all 0.25s ease-in;
+}
+
+.overlay.show {
+    display: block;
 }
 
 

@@ -5,8 +5,13 @@
         display: flex;
     }
 
-    .nav-btn {
+    .nav-btn,
+    .nav-menu {
         display: none;
+    }
+
+    .show {
+        display: none !important;
     }
 
 }
@@ -15,6 +20,10 @@
     .header__links {
         display: flex;
         align-items: center;
+    }
+
+    .header-content__caption {
+        max-width: 52rem;
     }
 }
 
