@@ -1,7 +1,9 @@
 :root {
     --orange: #E76F51;
     --dark-gray: #3B3735;
+    --pink: #F8E1DB;
     --app-color: #FAF4F2;
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 /* reset */
@@ -334,7 +336,7 @@ a {
     margin-bottom: 2rem;
     padding: 4rem;
     flex-grow: 1;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 .service__title {
@@ -380,7 +382,7 @@ a {
     border-radius: 2rem;
     flex-grow: 1;
     width: 30rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 .place__banner {
@@ -447,7 +449,6 @@ a {
     color: #8d8d8d;
 }
 
-
 .btn.destinations__btn {
     background-color: transparent;
     transition: all 0.15s ease-in;
@@ -464,6 +465,90 @@ a {
 /* destinations */
 
 
+/* newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10rem;
+    background-color: var(--pink);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+}
+
+.newsletter__content {
+    text-align: center;
+}
+
+.newsletter__title {
+    font-size: 3rem;
+    font-family: "Archivo Black";
+    max-width: 17rem;
+    color: var(--dark-gray);
+    margin: 1.5rem auto;
+}
+
+.newsletter_caption {
+    font-family: "Roboto Medium";
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.email-box {
+    height: 7rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 0 1.5rem;
+}
+
+.newsletter__form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.email-box__email-icon {
+    flex-shrink: 0;
+}
+
+.email-box__input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
+
+.email_box__submit {
+    background-color: var(--orange);
+    outline: none;
+    border: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+        background-color: #e95b38;
+    }
+}
+
+.newsletter__banner {
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.newsletter__banner-img {
+    width: 100%;
+}
+
+/* newsletter */
 
 
 .overlay {
