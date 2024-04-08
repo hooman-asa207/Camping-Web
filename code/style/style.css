@@ -39,7 +39,6 @@ a {
 
 
 /* helper class & component */
-
 .btn {
     display: block;
     width: 15rem;
@@ -550,6 +549,68 @@ a {
 
 /* newsletter */
 
+/* footer */
+.footer {
+    width: 100%;
+    margin-top: 7rem;
+    background: var(--pink);
+    border-radius: 10rem 10rem 0 0;
+    padding: 10rem 2rem 2rem 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__title {
+    font-family: "Archivo Black";
+    max-width: 17rem;
+    color: var(--dark-gray);
+    max-width: 24rem;
+    margin-bottom: 2rem;
+}
+
+.footer__caption {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin-top: 1rem;
+}
+
+.footer__lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.footer-list {}
+
+.footer-pages {}
+
+.footer-pages__link {
+    color: var(--dark-gray);
+    transition: all 0.15s ease-in;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer__bottom {
+    margin-top: 1rem;
+}
+
+.footer__img-wrapper {}
+
+.footer__store_links {}
+
+/* footer */
 
 .overlay {
     display: none;
