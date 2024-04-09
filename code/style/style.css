@@ -10,6 +10,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -66,6 +67,22 @@ a {
     min-height: 90vh;
     border-bottom-left-radius: 10rem;
     border-bottom-right-radius: 10rem;
+}
+
+.header__scroll-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    position: fixed;
+    z-index: 10;
+    right: 4rem;
+    bottom: 5rem;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
 }
 
 .nav {
@@ -590,13 +607,10 @@ a {
     margin: 2rem 0;
 }
 
-.footer-list {}
-
-.footer-pages {}
-
 .footer-pages__link {
     color: var(--dark-gray);
     transition: all 0.15s ease-in;
+
     &:hover {
         text-decoration: underline;
     }
@@ -605,10 +619,6 @@ a {
 .footer__bottom {
     margin-top: 1rem;
 }
-
-.footer__img-wrapper {}
-
-.footer__store_links {}
 
 /* footer */
 

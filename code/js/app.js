@@ -13,3 +13,13 @@ navBtn.addEventListener("click", () => {
         overlay.classList.add("show")
     }
 })
+
+const headerScrollLink = $.querySelector(".header__scroll-link")
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+        headerScrollLink.style.opacity = 1
+    } else if (window.scrollY < 800) {
+        headerScrollLink.style.opacity = 0
+    }
+})
