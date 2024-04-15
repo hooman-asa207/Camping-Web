@@ -8,6 +8,7 @@
     .header__scroll-link {
         right: 7.5rem;
     }
+    
 }
 
 @media (min-width: 768px) {
@@ -37,6 +38,12 @@
     .newsletter__title {
         max-width: none;
         margin: 0;
+    }
+    .newsletter::before {
+        width: auto;
+        top: 6rem;
+        left: -27rem;
+        background-size: cover;
     }
 
 }
@@ -73,6 +80,10 @@
 
     .footer__title {
         max-width: none;
+    }
+    .newsletter::before {
+        top: 6rem;
+        left: -27rem;
     }
 
 }
