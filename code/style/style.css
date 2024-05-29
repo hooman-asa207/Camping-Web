@@ -144,7 +144,7 @@ a {
 }
 
 .header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(59, 55, 53, 0.5)), to(rgba(59, 55, 53, 0.5))), url(/images/header-bg.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(59, 55, 53, 0.5)), to(rgba(59, 55, 53, 0.5))), url(./images/header-bg.jpg);
     background: -o-linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(./images/header-bg.jpg);
     background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(./images/header-bg.jpg);
     background-position: center;
@@ -533,13 +533,13 @@ a {
     position: relative;
 
     &::before {
-        background: url(/images/svgs/shape2.svg);
+        background: url(./images/svgs/shape2.svg);
         right: 90rem;
         top: 75rem;
     }
 
     &::after {
-        background: url(/images/svgs/shape1.svg);
+        background: url(./images/svgs/shape1.svg);
         left: 100rem;
         top: -50rem;
     }
@@ -690,7 +690,7 @@ a {
         content: '';
         width: 50rem;
         height: 50rem;
-        background: url(/images/svgs/shape3.svg);
+        background: url(./images/svgs/shape3.svg);
         position: absolute;
         background-repeat: no-repeat;
         background-size: contain;
